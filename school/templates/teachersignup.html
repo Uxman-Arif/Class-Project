@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Management System - Teacher Sign In</title>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'bootstrap.css' %}">
+</head>
+<style>
+    .signuprow{
+        margin-top: 100px;
+    }
+
+    .container-fluid{
+        background: url("{%static 'bgs.jpg' %}") no-repeat center / cover;
+        background-size: 100% 100%;
+        padding-bottom: 40px;
+    }
+
+    .signupcol{
+        border: 2px double black;
+        border-radius: 50px;
+    }
+
+    .signuphead{
+        font-size: 80px;
+        font-family: cursive;
+        text-shadow: 2px 2px 2px brown;
+    }
+    .signupbtn{
+        transition: all 0.3s ease-in-out 0.3s;
+    }
+
+    .signupbtn:hover{
+        background-color: black;
+        color: white;
+    }
+
+    .porhead{
+        text-shadow: 2px 2px 2px rgb(26, 141, 76);
+        font-family: cursive;
+    }
+</style>
+<body>
+    <!-- <img src="{%static 'bg.jpg' %}" alt="er"> -->
+    <div class="container-fluid">
+        <h1 class="text-capitalize text-center fw-bolder porhead">welcome to Teachers Portal!</h1>
+        <div class="row justify-content-end text-center signuprow align-items-end">
+            <div class="col-md-6 signupcol py-5">
+                <h1 class="mb-5 fw-bold signuphead text-success user-select-none">Sign Up Here</h1>
+                <form action="teachersignup" method="post">{% csrf_token %}
+                    <label class="fw-bold" for="name">Name*:</label>
+                    <input  class="m-2" name="teachersignupname" id="name" type="text" required><br>
+            
+                    <label class="fw-bold" for="password">Password*:</label>
+                    <input  class="m-2" name="teachersignuppassword" id="password" type="text" required><br>
+                    <button class="btn btn-primary signupbtn m-2">Sign Up</button>
+                </form>
+                <span>Already have account <a href="teachersignin">Sign in</a></span>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

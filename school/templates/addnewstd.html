@@ -1,0 +1,100 @@
+{% extends 'teacherportal.html' %}  
+
+{% block title %}Teacher Portal - Add New Student Data{% endblock %}  
+{% block body %}  
+<form action="#" method="post">{% csrf_token %}  
+    <table class="table table-bordered table-responsive">  
+        <tbody>  
+            <tr>  
+                <th>Roll No:</th>  
+                <td> <input type="text" name="rollno" value="{{prod.0.rollno}}"></td>  
+            </tr>  
+            <tr>  
+                <th>Registration No:</th>  
+                <td> <input type="text" name="regno" value="{{prod.0.regno}}"></td>  
+            </tr>  
+            <tr>  
+                <th>Student Name:</th>  
+                <td> <input type="text" name="stdname" value="{{prod.0.sname}}"></td>  
+            </tr>  
+            <tr>  
+                <th>Father Name:</th>  
+                <td> <input type="text" name="fname" value="{{prod.0.fname}}"></td>  
+            </tr>  
+            <tr>  
+                <th>Session:</th>  
+                <td> <input type="text" name="session" value="{{prod.0.session}}"></td>  
+            </tr>  
+            <tr>  
+                <th>Semester:</th>  
+                <td> <input type="text" name="semester" value="{{prod.0.semester}}"></td>  
+            </tr>  
+        </tbody>  
+    </table>  
+
+    <table class="table table-bordered mt-5 table-responsive">  
+        <thead class="bg-dark text-light">  
+            <tr>  
+                <th>Course Code</th>  
+                <th>Course Name</th>  
+                <th>Cr.Hrs</th>  
+                <th>Total Marks</th>  
+                <th>Marks Obtained</th> 
+            </tr>  
+        </thead>  
+        <tbody>  
+
+            <tr>  
+                <td><input type="text" name="courdecode" value=""></td>
+                <td><input type="text" name="name" value="{{prod.0.name1}}"></td>  
+                <td><input type="text" name="crhours" value="{{prod.0.crhours}}"></td>  
+                <td><input type="text" name="tmark" value="{{prod.0.tmark}}"></td>  
+                <td><input type="text" name="omark" value="{{prod.0.omark}}"></td>  
+            </tr>  
+
+            <tr>  
+                <td><input type="text" name="courdecode1" value=""></td>
+                <td><input type="text" name="name1" value="{{prod.0.name1}}"></td>  
+                <td><input type="text" name="crhours1" value="{{prod.0.crhours}}"></td>  
+                <td><input type="text" name="tmark1" value="{{prod.0.tmark}}"></td>  
+                <td><input type="text" name="omark1" value="{{prod.0.omark}}"></td>  
+            </tr>  
+
+            <tr>  
+                <td><input type="text" name="courdecode2" value=""></td>
+                <td><input type="text" name="name2" value="{{prod.0.name1}}"></td>  
+                <td><input type="text" name="crhours2" value="{{prod.0.crhours}}"></td>  
+                <td><input type="text" name="tmark2" value="{{prod.0.tmark}}"></td>  
+                <td><input type="text" name="omark2" value="{{prod.0.omark}}"></td>  
+            </tr>  
+
+            <tr>  
+                <td><input type="text" name="courdecode3" value=""></td>
+                <td><input type="text" name="name3" value="{{prod.0.name1}}"></td>  
+                <td><input type="text" name="crhours3" value="{{prod.0.crhours}}"></td>  
+                <td><input type="text" name="tmark3" value="{{prod.0.tmark}}"></td>  
+                <td><input type="text" name="omark3" value="{{prod.0.omark}}"></td>  
+            </tr>  
+
+            <tr>  
+                <td><input type="text" name="courdecode4" value=""></td>
+                <td><input type="text" name="name4" value="{{prod.0.name1}}"></td>  
+                <td><input type="text" name="crhours4" value="{{prod.0.crhours}}"></td>  
+                <td><input type="text" name="tmark4" value="{{prod.0.tmark}}"></td>  
+                <td><input type="text" name="omark4" value="{{prod.0.omark}}"></td>  
+            </tr>  
+
+            <tr>  
+                <td><input type="text" name="courdecode5" value=""></td>
+                <td><input type="text" name="name5" value="{{prod.0.name1}}"></td>  
+                <td><input type="text" name="crhours5" value="{{prod.0.crhours}}"></td>  
+                <td><input type="text" name="tmark5" value="{{prod.0.tmark}}"></td>  
+                <td><input type="text" name="omark5" value="{{prod.0.omark}}"></td>  
+            </tr>  
+
+        </tbody>  
+    </table>  
+    <button type="submit" class="btn btn-primary">Save!</button>  
+</form>  
+
+{% endblock %}

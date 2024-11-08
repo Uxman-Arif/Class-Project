@@ -1,0 +1,116 @@
+{%extends 'teacherportal.html' %}
+{% block title %}Teacher Portal - View Result{% endblock %}
+{% block body %}
+  <div class='container-fluid'>
+  <div class='row'>
+  <div class='col-6'>
+    <table class="table table-bordered table-responsive">
+          <tbody>
+            <th>Roll No:</th>
+            <td>{{bookresult.rollno}}</td>
+          </tbody>
+          <tbody>
+            <th>Registration No:</th>
+            <td>{{bookresult.regno}}</td>
+          </tbody>
+          <tbody>
+            <th>Student Name:</th>
+            <td>{{bookresult.sname}}</td>
+          </tbody>
+          <tbody>
+            <th>Father Name:</th>
+            <td>{{bookresult.fname}}</td>
+          </tbody>
+          <tbody>
+            <th>Program /Session:</th>
+            <td>{{bookresult.session}}</td>
+          </tbody>
+          <tbody>
+            <th>Semester:</th>
+            <td>{{bookresult.semester}}</td>
+          </tbody>
+        </table>
+      </div>
+      </div>
+
+
+<table class="table table-bordered mt-5 table-responsive">
+          <thead class="bg-dark text-light">
+            <tr>
+              <th scope="col">Course Code</th>
+              <th scope="col">Course Name</th>
+              <th scope="col">Cr.Hrs</th>
+              <th scope="col">Total Marks</th>
+              <th scope="col">Marks Obtained</th>
+              <th scope="col">%age</th>
+              <th scope="col">Letter Grade</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+                <td>{{bookresult.courdecode}}</td>
+                <td>{{bookresult.bname}}</td>
+                <td>{{bookresult.crhours}}</td>
+                <td>{{bookresult.tmark}}</td>
+                <td>{{bookresult.omark}}</td>
+                <td>{{bookresult.percentage}}</td>
+                <td>{{bookresult.lettergrage}}</td>
+            </tr>
+
+            <tr>
+                <td>{{bookresult.courdecode1}}</td>
+                <td>{{bookresult.bname1}}</td>
+                <td>{{bookresult.crhours1}}</td>
+                <td>{{bookresult.tmark1}}</td>
+                <td>{{bookresult.omark1}}</td>
+                <td>{{bookresult.percentage1}}</td>
+                <td>{{bookresult.lettergrage1}}</td>
+            </tr>
+
+            <tr>
+                <td>{{bookresult.courdecode2}}</td>
+                <td>{{bookresult.bname2}}</td>
+                <td>{{bookresult.crhours2}}</td>
+                <td>{{bookresult.tmark2}}</td>
+                <td>{{bookresult.omark2}}</td>
+                <td>{{bookresult.percentage2}}</td>
+                <td>{{bookresult.lettergrage2}}</td>
+            </tr>
+
+            <tr>
+                <td>{{bookresult.courdecode3}}</td>
+                <td>{{bookresult.bname3}}</td>
+                <td>{{bookresult.crhours3}}</td>
+                <td>{{bookresult.tmark3}}</td>
+                <td>{{bookresult.omark3}}</td>
+                <td>{{bookresult.percentage3}}</td>
+                <td>{{bookresult.lettergrage3}}</td>
+            </tr>
+
+            <tr>
+                <td>{{bookresult.courdecode4}}</td>
+                <td>{{bookresult.bname4}}</td>
+                <td>{{bookresult.crhours4}}</td>
+                <td>{{bookresult.tmark4}}</td>
+                <td>{{bookresult.omark4}}</td>
+                <td>{{bookresult.percentage4}}</td>
+                <td>{{bookresult.lettergrage4}}</td>
+            </tr>
+
+            <tr>
+                <td>{{bookresult.courdecode5}}</td>
+                <td>{{bookresult.bname5}}</td>
+                <td>{{bookresult.crhours5}}</td>
+                <td>{{bookresult.tmark5}}</td>
+                <td>{{bookresult.omark5}}</td>
+                <td>{{bookresult.percentage5}}</td>
+                <td>{{bookresult.lettergrage5}}</td>
+            </tr>
+
+            </tbody>
+          </table>
+
+          </div>
+{% endblock %}
+

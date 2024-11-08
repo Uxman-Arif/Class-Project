@@ -1,0 +1,95 @@
+{%extends 'teacherportal.html' %}
+{% block body %}
+<form action="#" method="post">{% csrf_token %}
+    <table class="table table-bordered table-responsive">
+          <tbody>
+            <th>Roll No:</th>
+            <td> <input type="text" value="{{bookresult.rollno}}" name="crollno"> </td>
+          </tbody>
+          <tbody>
+            <th>Registration No:</th>
+            <td> <input type="text" value="{{bookresult.regno}}" name="cregno"> </td>
+          </tbody>
+          <tbody>
+            <th>Student Name:</th>
+            <td> <input type="text" value="{{bookresult.sname}}" name="csname"> </td>
+          </tbody>
+          <tbody>
+            <th>Father Name:</th>
+            <td> <input type="text" value="{{bookresult.fname}}" name="cfname"> </td>
+          </tbody>
+          <tbody>
+            <th>Program /Session:</th>
+            <td> <input type="text" value="{{bookresult.session}}" name="csession"> </td>
+          </tbody>
+          <tbody>
+            <th>Semester:</th>
+            <td> <input type="text" value="{{bookresult.semester}}" name="csemester"> </td>
+          </tbody>
+        </table>
+
+<table class="table table-bordered mt-5 table-responsive">
+          <thead class="bg-dark text-light">
+            <tr>
+              <th scope="col">Course Code</th>
+              <th scope="col">Course Name</th>
+              <th scope="col">Cr.Hrs</th>
+              <th scope="col">Total Marks</th>
+              <th scope="col">Marks Obtained</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+                <td> <input type="text" value="{{bookresult.courdecode}}" name="ccourdecode"></td>
+                <td> <input type="text" value="{{bookresult.bname}}" name="cbname"></td>
+                <td> <input type="text" value="{{bookresult.crhours}}" name="ccrhours"></td>
+                <td> <input type="text" value="{{bookresult.tmark}}" name="ctmark"></td>
+                <td> <input type="text" value="{{bookresult.omark}}" name="comark"></td>
+            </tr>
+
+            <tr>
+                <td> <input type="text" value="{{bookresult.courdecode1}}" name="ccourdecode1"></td>
+                <td> <input type="text" value="{{bookresult.bname1}}" name="cbname1"></td>
+                <td> <input type="text" value="{{bookresult.crhours1}}" name="ccrhours1"></td>
+                <td> <input type="text" value="{{bookresult.tmark1}}" name="ctmark1"></td>
+                <td> <input type="text" value="{{bookresult.omark1}}" name="comark1"></td>
+            </tr>
+
+            <tr>
+                <td> <input type="text" value="{{bookresult.courdecode2}}" name="ccourdecode2"></td>
+                <td> <input type="text" value="{{bookresult.bname2}}" name="cbname2"></td>
+                <td> <input type="text" value="{{bookresult.crhours2}}" name="ccrhours2"></td>
+                <td> <input type="text" value="{{bookresult.tmark2}}" name="ctmark2"></td>
+                <td> <input type="text" value="{{bookresult.omark2}}" name="comark2"></td>
+            </tr>
+
+            <tr>
+                <td> <input type="text" value="{{bookresult.courdecode3}}" name="ccourdecode3"></td>
+                <td> <input type="text" value="{{bookresult.bname3}}" name="cbname3"></td>
+                <td> <input type="text" value="{{bookresult.crhours3}}" name="ccrhours3"></td>
+                <td> <input type="text" value="{{bookresult.tmark3}}" name="ctmark3"></td>
+                <td> <input type="text" value="{{bookresult.omark3}}" name="comark3"></td>
+            </tr>
+
+            <tr>
+                <td> <input type="text" value="{{bookresult.courdecode4}}" name="ccourdecode4"></td>
+                <td> <input type="text" value="{{bookresult.bname4}}" name="cbname4"></td>
+                <td> <input type="text" value="{{bookresult.crhours4}}" name="ccrhours4"></td>
+                <td> <input type="text" value="{{bookresult.tmark4}}" name="ctmark4"></td>
+                <td> <input type="text" value="{{bookresult.omark4}}" name="comark4"></td>
+            </tr>
+
+            <tr>
+                <td> <input type="text" value="{{bookresult.courdecode5}}" name="ccourdecode5"></td>
+                <td> <input type="text" value="{{bookresult.bname5}}" name="cbname5"></td>
+                <td> <input type="text" value="{{bookresult.crhours5}}" name="ccrhours5"></td>
+                <td> <input type="text" value="{{bookresult.tmark5}}" name="ctmark5"></td>
+                <td> <input type="text" value="{{bookresult.omark5}}" name="comark5"></td>
+            </tr>
+
+            </tbody>
+          </table>
+<button class="btn btn-primary">Save!</button>
+</form>
+{% endblock %}

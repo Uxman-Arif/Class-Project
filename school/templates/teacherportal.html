@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>{% block title %}Student Management System - Teacher Portal{% endblock %}</title>
+    <link rel="stylesheet" href="{%static 'bootstrap.css' %}">
+</head>
+<style>
+  /* {% block css %}
+  
+  {% endblock %}  */
+  td input{
+    border: none;
+    min-width: 20px;
+  }
+
+  td input:visited{
+    border: none;
+    min-width: 20px;
+  }
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown link
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      {% block body %}
+      <div class="container-fluid">
+        
+        <form method="post" action="teacherportal">{% csrf_token %}
+          <input type="search" name="searchbox" placeholder="Search Here..." id="">
+          <button class="btn btn-primary">Search</button>
+        </form>
+
+        <table class="table table-bordered mt-5 table-responsive">
+          <thead class="bg-dark text-light">
+            <tr>
+              <th scope="col">Roll No</th>
+              <th scope="col">Name</th>
+              <th scope="col">Program / Session</th>
+            </tr>
+          </thead>
+          
+        {% for i in prod %}
+          <tbody>
+            <tr>
+                <!-- <td>1</td> -->
+                <td>{{i.rollno}}</td>
+                <td>{{i.sname}}</td>
+                <td>{{i.session}}</td>
+                <td><a href="changeresult/{{i.rollno}}">change</a></td>
+                <td><a href="viewresult/{{i.rollno}}">viewresult</a></td>
+              </tr>
+            </tbody>
+          {% endfor %}
+          </table>
+      </div>
+      <a href="addnewstd">Add new Student record!</a>
+
+      {% endblock %}
+      
+</body>
+</html>

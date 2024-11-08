@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Management System</title>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'bootstrap.css' %}">
+</head>
+<style>
+    .header{
+        font-family: cursive;
+        text-shadow: 2px 2px 2px brown;
+        font-size: 50px;
+    }
+    .teachbtn{
+        width: 400px;
+        height: 170px;
+        font-size: 80px;
+        font-weight: bold;
+        margin: 5px;
+        transition: all 0.4s ease-out 0.4s;
+    }
+    .teachbtn:hover{
+        transform: rotate(360deg);
+        /* transform: translate(140px, 140px); */
+        background-color: black;
+        color: brown;
+        border: 4px double brown;
+        border-radius: 40px;
+    }
+
+    .basheer{
+        pointer-events: auto;
+        width: 400px;
+        height: 170px;
+        font-size: 80px;
+        font-weight: bold;
+        background-color: none;
+        color: brown;
+        position: absolute;
+        margin-top: -175px;
+        margin-left: 150px;
+        z-index: 2;
+        transition: all 0.4s ease-out 0.4s;
+    }
+    .basheer:hover{
+        transform: translateX(100px);
+        color: white;
+    }
+</style>
+<body>
+    
+    <div class="container pt-5">
+        <div class="row justify-content-md-center align-items-center pt-5">
+            <div class="col-12 text-center mt-5">
+                <h1 class="text-dark mb-4 fw-bold header user-select-none">Are You : </h1>
+                <a class="btn btn-primary teachbtn tch" href="teachersignin">Teacher</a>
+                <a class="btn btn-primary teachbtn tch" href="studentsignin">Student</a>
+                <!-- <div class="basheer user-select-none">Basheer</div> -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
